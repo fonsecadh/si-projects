@@ -65,10 +65,23 @@ A* has the following formal properties:
     \item \textbf{Dominance:} if $h2$ is better informed than $h1$, then every node expanded by $A*(h2)$ is expanded by $A*(h1)$. This means that $A*(h2)$ dominates $A*(h1)$. For an heuristic function $h1$ to be better informed than another one $h1$ the following must be true: $h1(n) < h2(n) \leq h*(n)$ for every $n$ non final.
     \item \textbf{Monotony:} an heuristic function $h1$ is monotonous if for every pair of nodes $n1$ and $n2$ it is true that $h(n1) \leq h(n2) + c(n1, n2)$ being $c$ the cost of going from $n1$ to $n2$.
 \end{itemize}
-
 % Genetic algorithms
 \section{Genetic algorithms}\label{gen_algs}
-Description of the Genetic Algorithms.
+Genetic algorithms are metaheuristic search and optimization algorithms and a class of evolutionary algorithms based on the model of natural biological evolution depicted by Charles Darwin in his book \textit{On the Origin of Species}. They perform the evolution of a population, selecting the fittest individuals to become the parents of the next generation. The next generation will be reproduced using crossover and mutation operators.
+
+A genetic algorithm has the following components:
+\begin{itemize}
+    \item A \textbf{codification scheme}. The genetic algorithm needs some kind of codification in order to represent potential solutions. It can be a chain of binary digits, permutations, vectors, etc. 
+    \item A \textbf{fitness function}. This function is used to evaluate each individual and assign to them a value used for their selection as potential parents for the next generation. The fitness value is the non-negative value representing the performance of a given individual.
+    \item A way of \textbf{generating the initial population}. This method of creating initial populations can be done by the use of an heuristic function or, in the simplest case, making a random population disregarding their level of quality.
+    \item A set of \textbf{genetic operators}. 
+    \begin{itemize}
+        \item \textbf{Selection:} operator that chooses a set of individuals from the current generation to be the parents for the next generation.
+        \item \textbf{Crossover:} operator that combines two or more parents to obtain offsprings that most likely will inherit characteristics from their parents.
+        \item \textbf{Mutation:} operator that makes minor random changes in the genetic structure of a chromosome in order to obtain a new range of genetic material.
+    \end{itemize}
+    \item Some \textbf{parameters}. Like the population size, number of generations, crossover probability, mutation probability, etc.
+\end{itemize}
 \section{Application of A* algorithm to the N-queens problem}\label{astar_nqueens}
 Application of A* algorithm to the N-queens Problem.
 \section{Applications of genetic algorithms to the N-queens problem}\label{gen_nqueens}
