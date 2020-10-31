@@ -16,31 +16,33 @@
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 \usepackage[hmargin=2cm,top=4cm,headheight=65pt,footskip=65pt]{geometry}
 
-\title{Heuristic Search Practices. Course 2020-2021. N-Queens with A* and Genetic Algorithms.}
+\title{Heuristic Search Practices. Course 2020-2021. N-queens with A* and Genetic Algorithms.}
 \author{Hugo Fonseca Díaz}
 
 % Document
 \begin{document}
 % Abstract
 \begin{abstract}
-This is the abstract.
+This is the abstract. TBD.
 % Keywords
-\keywords{A* \and Genetic algorithms \and N-Queens problem 
+\keywords{A* \and Genetic algorithms \and N-queens problem 
     \and Heuristic Search.}
 \end{abstract}
 % Introduction
 \section{Introduction}\label{introduction}
-In this paper we will conduct a experimental research on two strategies for solving the N-Queens problem, these two being the A* algorithm and a genetic algorithm. We will take measurements using a varying number of board sizes and compare the results not only between the two approaches, but also finding out which heuristic is best for each configuration in the case of the A* algorithm. 
-\section{N-Queens Problem}\label{nqueens_problem}
-Description of the N-Queens Problem.
+In this paper a research will be conducted in order to solve the N-queens search problem using two different approaches. This strategies consist of the use of the A* algorithm and the genetic algorithms.
+
+First, the N-queens problem will be defined. After that, the A* algorithm and its application to this concrete problem will be explained. The same structure will be later applied to the genetic algorithms. Finally, an experimental study will be carried out in order to check the efectiveness of both approaches and the conclusions of the paper will be layed out.
+\section{N-queens Problem}\label{nqueens_problem}
+Introduced in 1848 by chess composer Max Bezzel as the \textit{eight queens puzzle}, it was later solved and extended by Franz Nauck to the \textit{n queens problem}. It is a very well known constraint satisfaction problem, and consists in setting N chess queens in a gameboard of NxN dimensions such as no pair of queens are attacking themselves. In chess, queens can attack other pieces if they are in the same row, column or diagonal as them.
 \section{A* Algorithm}\label{astar_alg}
-Description of the A* Algorithm.
+The A* algorithm is a specialization of the BF (Best First) algorithm.
 \section{Genetic Algorithms}\label{gen_algs}
 Description of the Genetic Algorithms.
-\section{Application of A* Algorithm to the N-Queens Problem}\label{astar_nqueens}
-Application of A* Algorithm to the N-Queens Problem.
-\section{Applications of Genetic Algorithms to the N-Queens Problem}\label{gen_nqueens}
-Application of Genetic Algorithms to the N-Queens Problem.
+\section{Application of A* Algorithm to the N-queens Problem}\label{astar_nqueens}
+Application of A* Algorithm to the N-queens Problem.
+\section{Applications of Genetic Algorithms to the N-queens Problem}\label{gen_nqueens}
+Application of Genetic Algorithms to the N-queens Problem.
 \section{Experimental Research}\label{exp_research}
 Experimental Research.
 \subsection{Dataset}\label{dataset}
@@ -53,5 +55,27 @@ Genetic Algorithm Results.
 Comparison of A* and GA results.
 \section{Conclusions}\label{conclusions}
 Conclusions.
+% Bibliography
+\begin{thebibliography}{8}
+\bibitem{ref_article1}
+Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
+
+\bibitem{ref_lncs1}
+Author, F., Author, S.: Title of a proceedings paper. In: Editor,
+F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
+Springer, Heidelberg (2016). \doi{10.10007/1234567890}
+
+\bibitem{ref_book1}
+Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
+Location (1999)
+
+\bibitem{ref_proc1}
+Author, A.-B.: Contribution title. In: 9th International Proceedings
+on Proceedings, pp. 1--2. Publisher, Location (2010)
+
+\bibitem{ref_url1}
+LNCS Homepage, \url{http://www.springer.com/lncs}. Last accessed 4
+Oct 2017
+\end{thebibliography}
 \end{document}
 
