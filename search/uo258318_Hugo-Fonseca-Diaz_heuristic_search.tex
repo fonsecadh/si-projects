@@ -4,6 +4,7 @@
 \usepackage{parskip}
 \usepackage[colorlinks=true,urlcolor=Blue,linkcolor=black,citecolor=black]{hyperref}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{fancyhdr}
@@ -37,7 +38,7 @@ First, the N-queens problem will be defined. After that, the A* algorithm and it
 Introduced in 1848 by chess composer Max Bezzel as the \textit{eight queens puzzle}, it was later solved and extended by Franz Nauck to the \textit{n queens problem}. It is a very well known constraint satisfaction problem, and consists in setting N chess queens in a gameboard of NxN dimensions such as no pair of queens are attacking themselves. In chess, queens can attack other pieces if they are in the same row, column or diagonal as them.
 % A* algorithm
 \section{A* algorithm}\label{astar_alg}
-The A* algorithm is a specialization of the BF (Best First) algorithm with a different evaluation function. Before expressing this evaluation function, some concepts must be introduced:
+The A* algorithm is an informed search algorithm. Its also an specialization of the BF (Best First) algorithm with a different evaluation function. Before expressing this evaluation function, some concepts must be introduced:
 \begin(equation)\label{astar_concepts_function}
 f*(n) = g*(n) + h*(n)
 \end(equation)
@@ -57,6 +58,14 @@ f(n) = g(n) + h(n)
     \item $h(n)$ is a positive estimation of $h*(n)$, such as $h(n) = 0$ if $n$ is a target node.
     \item $f(n)$ is an estimation of $f*(n)$
 \end{itemize}
+
+A* has the following formal properties:
+\begin{itemize}
+    \item \textbf{Admissibility:} a search algorithm is said to be admissible if it always finds the optimal solution. This means that the heuristic function $h$ must be a positive estimation of the value of $h*(n)$ for all nodes, that is, $h(n) \leq h*(n) \forall n$. 
+    \item \textbf{Dominance:} if $h2$ is better informed than $h1$, then every node expanded by $A*(h2)$ is expanded by $A*(h1)$. This means that $A*(h2)$ dominates $A*(h1)$. For an heuristic function $h1$ to be better informed than another one $h1$ the following must be true: $h1(n) < h2(n) \leq h*(n)$ for every $n$ non final.
+    \item \textbf{Monotony:} an heuristic function $h1$ is monotonous if for every pair of nodes $n1$ and $n2$ it is true that $h(n1) \leq h(n2) + c(n1, n2)$ being $c$ the cost of going from $n1$ to $n2$.
+\end{itemize}
+
 % Genetic algorithms
 \section{Genetic algorithms}\label{gen_algs}
 Description of the Genetic Algorithms.
