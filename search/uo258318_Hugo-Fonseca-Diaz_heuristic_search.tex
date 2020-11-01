@@ -101,7 +101,20 @@ Three heuristic functions were implemented for solving the problem:
 \end{itemize}
 % Application of genetic algorithms to the N-queens problem
 \section{Applications of genetic algorithms to the N-queens problem}\label{gen_nqueens}
-Application of Genetic Algorithms to the N-queens Problem.
+The genetic algorithm implemented for solving the N-queens problem has the following characteristics:
+\begin{itemize}
+    \item \textbf{Codification scheme:} a chain of permutations that contains the rows in which the queens are located.
+    \item \textbf{Fitness function:} implements fitness scaling, that is, to further differenciate the good chromosomes from the bad ones. The way it is done is by substracting from the fitness value of all individuals the fitness value of the worst in that generation. 
+    \item \textbf{Generating the initial population:} a chromosome is a random permutation of the numbers ranged from one to the size of the board such as no number is repeated.
+    \item A set of \textbf{genetic operators}. 
+    \begin{itemize}
+        \item \textbf{Selection:} introduces elitism, that is, the best individual of that generation is carried over the next generation.
+        \item \textbf{Crossover:} implements the OX (Order crossover) operator. This method of crossover implies that the offspring will inherit the order and position of some of the genes of a parent and the relative order of the remaining genes of the other parent.
+        \item \textbf{Mutation:} swaps the content of two random positions of the permutation.
+    \end{itemize}
+    \item \textbf{Parameters:} $Population size = 50$, $mutation probability = 0.15$, $number of generations = 100$.
+\end{itemize}
+% Experimental Research
 \section{Experimental Research}\label{exp_research}
 Experimental Research.
 \subsection{Dataset}\label{dataset}
