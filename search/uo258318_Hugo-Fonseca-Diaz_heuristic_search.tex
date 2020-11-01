@@ -164,9 +164,10 @@ The results obtained in the executions of A* are the following:
 For the \textit{null} heuristic the measurements obtained are listed below in the form of two tables. \textbf{Table 1} shows the expanded nodes for every version as well as the best, average and standard deviation for the completed version with queens in every column. \textbf{Table 2} shows the same information but for the path cost of the solution.
 
 \begin{table}[]
+\centering
 \begin{tabular}{llllll}
-Expanded &             &                      &                       &                          &                                 \\
-N        & Incremental & CompleteFirstRow     & CompleteEveryCol Best & CompleteEveryCol Average & CompleteEveryCol Std. Deviation \\
+Expanded &             &                      &                       &                          &                                 \\ \hline
+N        & Incremental & CompleteFirstRow     & ComplEveryCol Best    & ComplEveryCol Average    & ComplEveryCol Std. Deviation    \\ \hline
 4        & 15          & 70                   & 6                     & 68                       & 58,256                          \\
 6        & 149         & 15259                & 1667                  & 8873,2                   & 5215,761                        \\
 8        & 1965        & Not enough resources & 1738                  & 7276                     & 7831,915                       
@@ -176,9 +177,10 @@ N        & Incremental & CompleteFirstRow     & CompleteEveryCol Best & Complete
 \end{table}
 
 \begin{table}[]
+\centering
 \begin{tabular}{llllll}
-Path cost &             &                      &                       &                          &                                 \\
-N         & Incremental & CompleteFirstRow     & CompleteEveryCol Best & CompleteEveryCol Average & CompleteEveryCol Std. Deviation \\
+Path cost &             &                      &                       &                          &                                 \\ \hline
+N         & Incremental & CompetelFirstRow     & ComplEveryCol Best    & ComplEveryCol Average    & ComplEveryCol Std. Deviation    \\ \hline
 4         & 4           & 3                    & 1                     & 2,2                      & 0,919                           \\
 6         & 6           & 5                    & 3                     & 4,2                      & 0,632                           \\
 8         & 8           & Not enough resources & 3                     & 3                        & 0,000
@@ -191,9 +193,10 @@ N         & Incremental & CompleteFirstRow     & CompleteEveryCol Best & Complet
 For the \textit{number of attacking pairs} heuristic the results obtained are listed below in the form of two tables. \textbf{Table 3} shows the expanded nodes for every version as well as the best, average and standard deviation for the completed version with queens in every column. \textbf{Table 4} shows the same information but for the path cost of the solution.
 
 \begin{table}[]
+\centering
 \begin{tabular}{llllll}
-Expanded &                      &                  &                       &                          &                                 \\
-N        & Incremental          & CompleteFirstRow & CompleteEveryCol Best & CompleteEveryCol Average & CompleteEveryCol Std. Deviation \\
+Expanded &                      &                  &                       &                          &                                 \\ \hline
+N        & Incremental          & CompleteFirstRow & ComplEveryCol Best    & ComplEveryCol Average    & ComplEveryCol Std. Deviation    \\ \hline
 4        & 15                   & 4                & 2                     & 6,7                      & 4,855                           \\
 6        & 149                  & 76               & 3                     & 30,1                     & 17,527                          \\
 8        & 1965                 & 14               & 11                    & 37,2                     & 24,521                          \\
@@ -204,9 +207,10 @@ N        & Incremental          & CompleteFirstRow & CompleteEveryCol Best & Com
 \end{table}
 
 \begin{table}[]
+\centering
 \begin{tabular}{llllll}
-Path cost &                      &                  &                       &                          &                                 \\
-N         & Incremental          & CompleteFirstRow & CompleteEveryCol Best & CompleteEveryCol Average & CompleteEveryCol Std. Deviation \\
+Path cost &                      &                  &                       &                          &                                 \\ \hline
+N         & Incremental          & CompleteFirstRow & ComplEveryCol Best    & ComplEveryCol Average    & ComplEveryCol Std. Deviation    \\ \hline
 4         & 4                    & 3                & 2                     & 2,8                      & 0,632                           \\
 6         & 6                    & 6                & 3                     & 4,1                      & 0,738                           \\
 8         & 8                    & 8                & 4                     & 4,9                      & 0,876                           \\
@@ -221,7 +225,33 @@ For the \textit{probabilist estimation of solution} heuristic the results obtain
 
 % Genetic algorithm results
 \subsection{GA Results}\label{gen_results}
-Genetic Algorithm Results.
+Now the data obtained from the executions of the genetic algorithm will be shown in the form of three tables. \textbf{Table 7} shows the parameter values for the genetic algorithm. \textbf{Table 8} shows the average and best fitness values, the standard deviation and the number of solutions for each ten executions of the problem.
+
+\begin{table}[]
+\centering
+\begin{tabular}{l|l}
+pop size      & 50   \\ \hline
+mutation prob & 0.15 \\ \hline
+n generations & 100 
+\end{tabular}
+\caption{Parameters of the genetic algorithm}
+\label{tab:ag-parameters}
+\end{table}
+
+\begin{table}[]
+\centering
+\begin{tabular}{lllll}
+N  & Best Fitness & Average Fitness & Std. Deviation & Valid Solutions      \\ \hline
+4  & 6            & 6               & 0              & 10                   \\
+6  & 15           & 15              & 0              & 10                   \\
+8  & 28           & 28              & 0              & 10                   \\
+16 & 120          & 119,5           & 0,527          & 5                    \\
+32 & 493          & 492,3           & 0,949          & 0
+\end{tabular}
+\caption{Data obtained for the genetic algorithm}
+\label{tab:ag-data}
+\end{table}
+% Comparison of A* and GA results
 \subsection{Comparison of A* and GA results}\label{comparison_astar_gen}
 Comparison of A* and GA results.
 \section{Conclusions}\label{conclusions}
