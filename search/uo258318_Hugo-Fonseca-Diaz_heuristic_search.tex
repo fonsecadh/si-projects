@@ -16,11 +16,12 @@
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 \usepackage[hmargin=2cm,top=4cm,headheight=65pt,footskip=65pt]{geometry}
 
-\title{Heuristic Search Practices. Course 2020-2021. N-queens with A* and Genetic Algorithms.}
-\author{Hugo Fonseca Díaz}
-
 % Document
 \begin{document}
+% Title
+\title{Heuristic Search Practices. Course 2020-2021. N-queens with A* and Genetic Algorithms.}
+\author{Hugo Fonseca Díaz}
+\maketitle
 % Abstract
 \begin{abstract}
 This is the abstract. TBD.
@@ -39,31 +40,27 @@ Introduced in 1848 by chess composer Max Bezzel as the \textit{eight queens puzz
 % A* algorithm
 \section{A* algorithm}\label{astar_alg}
 The A* algorithm is an informed search algorithm. Its also an specialization of the BF (Best First) algorithm with a different evaluation function. Before expressing this evaluation function, some concepts must be introduced:
-\begin(equation)\label{astar_concepts_function}
-f*(n) = g*(n) + h*(n)
-\end(equation)
+\[f^{*}(n) = g^{*}(n) + h^{*}(n)\]
 \begin{itemize}
-    \item $g*(n)$ is the lowest path cost between the initial node and $n$.
-    \item $h*(n)$ is the lowest path cost between $n$ to the nearest target node.
-    \item $f*(n)$ is the lowest path cost between the initial node to the target node passing through node $n$. 
-    \item $C* = f*(initial) = h*(initial)$ is the cost of the optimal solution. 
+    \item $g^{*}(n)$ is the lowest path cost between the initial node and $n$.
+    \item $h^{*}(n)$ is the lowest path cost between $n$ to the nearest target node.
+    \item $f^{*}(n)$ is the lowest path cost between the initial node to the target node passing through node $n$. 
+    \item $C^{*} = f^{*}(initial) = h^{*}(initial)$ is the cost of the optimal solution. 
 \end{itemize}
 
 Once those concepts have been introduced, the A* evaluation function can be defined by:
-\begin(equation)\label{astar_eval_function}
-f(n) = g(n) + h(n)
-\end(equation)
+\[f(n) = g(n) + h(n)\]
 \begin{itemize}
     \item $g(n)$ is the best lowest path cost between the initial node and $n$ obtained during the search until that moment.
-    \item $h(n)$ is a positive estimation of $h*(n)$, such as $h(n) = 0$ if $n$ is a target node.
-    \item $f(n)$ is an estimation of $f*(n)$
+    \item $h(n)$ is a positive estimation of $h^{*}(n)$, such as $h(n) = 0$ if $n$ is a target node.
+    \item $f(n)$ is an estimation of $f^{*}(n)$
 \end{itemize}
 
 A* has the following formal properties:
 \begin{itemize}
-    \item \textbf{Admissibility:} a search algorithm is said to be admissible if it always finds the optimal solution. This means that the heuristic function $h$ must be a positive estimation of the value of $h*(n)$ for all nodes, that is, $h(n) \leq h*(n) \forall n$. 
-    \item \textbf{Dominance:} if $h2$ is better informed than $h1$, then every node expanded by $A*(h2)$ is expanded by $A*(h1)$. This means that $A*(h2)$ dominates $A*(h1)$. For an heuristic function $h1$ to be better informed than another one $h1$ the following must be true: $h1(n) < h2(n) \leq h*(n)$ for every $n$ non final.
-    \item \textbf{Monotony:} an heuristic function $h1$ is monotonous if for every pair of nodes $n1$ and $n2$ it is true that $h(n1) \leq h(n2) + c(n1, n2)$ being $c$ the cost of going from $n1$ to $n2$.
+    \item \textbf{Admissibility:} a search algorithm is said to be admissible if it always finds the optimal solution. This means that the heuristic function $h$ must be a positive estimation of the value of $h^{*}(n)$ for all nodes, that is, $h(n) \leq h^{*}(n) \forall n$. 
+    \item \textbf{Dominance:} if $h_2$ is better informed than $h_1$, then every node expanded by $A^{*}(h_2)$ is expanded by $A^{*}(h_1)$. This means that $A^{*}(h_2)$ dominates $A^{*}(h_1)$. For an heuristic function $h_2$ to be better informed than another one $h_1$ the following must be true: $h_1(n) < h_2(n) \leq h^{*}(n)$ for every $n$ non final.
+    \item \textbf{Monotony:} an heuristic function $h1$ is monotonous if for every pair of nodes $n_1$ and $n_2$ it is true that $h(n_1) \leq h(n_2) + c(n_1, n_2)$ being $c$ the cost of going from $n_1$ to $n_2$.
 \end{itemize}
 % Genetic algorithms
 \section{Genetic algorithms}\label{gen_algs}
