@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  1 NOV 2020 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  1 NOV 2020 22:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -707,11 +707,11 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `htbp') on input line 172.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 174.
+(Font)              <9> on input line 175.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 174.
+(Font)              <5> on input line 175.
 
-Overfull \hbox (1.24794pt too wide) in paragraph at lines 174--181
+Overfull \hbox (1.24794pt too wide) in paragraph at lines 175--183
  [][] 
  []
 
@@ -725,7 +725,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `htbp') on input line 201.
 
 
-Overfull \hbox (29.30556pt too wide) in paragraph at lines 203--211
+Overfull \hbox (29.30556pt too wide) in paragraph at lines 204--213
  [][] 
  []
 
@@ -734,22 +734,37 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `htbp') on input line 215.
 
 
-Overfull \hbox (27.29704pt too wide) in paragraph at lines 217--225
+Overfull \hbox (27.29704pt too wide) in paragraph at lines 218--227
  [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 236.
+               Default added (so using `htbp') on input line 232.
+
+
+Overfull \hbox (41.79123pt too wide) in paragraph at lines 235--244
+ [][] 
+ []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 247.
+               Default added (so using `htbp') on input line 246.
 
-[6]
-Underfull \vbox (badness 4378) has occurred while \output is active []
 
- [7]
+Overfull \hbox (39.78271pt too wide) in paragraph at lines 250--258
+ [][] 
+ []
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 263.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 274.
+
+[6] [7]
 
 ! LaTeX Error: Undefined color `Blue'.
 
@@ -757,28 +772,28 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.294 ...rl{https://github.com/aimacode/aima-java}
+l.321 ...rl{https://github.com/aimacode/aima-java}
                                                   . Last accesed 1 November ...
 
 ? 
 
 AED: lastpage setting LastPage
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 296.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 296.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 323.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 323.
  (./uo258318_Hugo-Fonseca-Diaz_heuristic_search.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 296.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 296.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 323.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 323.
 Package rerunfilecheck Info: File `uo258318_Hugo-Fonseca-Diaz_heuristic_search.
 out' has not changed.
 (rerunfilecheck)             Checksum: 1FC8F5A5EA460963949CFF489EFAFB43;121.
  ) 
 Here is how much of TeX's memory you used:
- 10614 strings out of 480478
- 162850 string characters out of 5905960
- 510920 words of memory out of 5000000
- 26318 multiletter control sequences out of 15000+600000
- 588671 words of font info for 90 fonts, out of 8000000 for 9000
+ 10620 strings out of 480478
+ 162946 string characters out of 5905960
+ 516119 words of memory out of 5000000
+ 26320 multiletter control sequences out of 15000+600000
+ 588754 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,8n,45p,914b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
@@ -794,11 +809,11 @@ b></usr/share/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf-dist
 /fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
 lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on uo258318_Hugo-Fonseca-Diaz_heuristic_search.pdf (8 pages, 286
-944 bytes).
+Output written on uo258318_Hugo-Fonseca-Diaz_heuristic_search.pdf (8 pages, 288
+388 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
+ 168 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
  20489 words of extra memory for PDF output out of 20736 (max. 10000000)
 

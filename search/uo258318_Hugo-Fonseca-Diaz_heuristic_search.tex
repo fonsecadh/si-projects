@@ -167,9 +167,10 @@ The problems to be resolved are the following:
 The results obtained in the executions of A* are the following:
 % Null heuristic
 \subsubsection{Null heuristic}
-For the \textit{null} heuristic the measurements obtained are listed below in the form of two tables. \textbf{Table 1} shows the expanded nodes for every version as well as the best, average and standard deviation for the completed version with queens in every column. \textbf{Table 2} shows the same information but for the path cost of the solution.
+For the \textit{null} heuristic the measurements obtained are listed below in the form of two tables. \textbf{Table 1} shows the expanded nodes for every version as well as the best, average and standard deviation for the completed version with queens in every column. Note that for $n = 8$ the average expanded nodes for the complete version with queens in every column is lower than for $n = 6$. This is because only two of ten executions were able to finish, and those were the ones with the lower expanded nodes. \textbf{Table 2} shows the same information but for the path cost of the solution.
 
 \begin{table}[]
+\caption{Expanded nodes for the \textit{null} heuristic function}
 \centering
 \begin{tabular}{llllll}
 Expanded &             &                      &                       &                          &                                 \\ \hline
@@ -178,11 +179,11 @@ N        & Incremental & CompleteFirstRow     & ComplEveryCol Best    & ComplEve
 6        & 149         & 15259                & 1667                  & 8873,2                   & 5215,761                        \\
 8        & 1965        & Not enough resources & 1738                  & 7276                     & 7831,915                       
 \end{tabular}
-\caption{Expanded nodes for the \textit{null} heuristic algorithm}
 \label{tab:h0-expanded}
 \end{table}
 
 \begin{table}[]
+\caption{Path cost for the \textit{null} heuristic function}
 \centering
 \begin{tabular}{llllll}
 Path cost &             &                      &                       &                          &                                 \\ \hline
@@ -191,7 +192,6 @@ N         & Incremental & CompetelFirstRow     & ComplEveryCol Best    & ComplEv
 6         & 6           & 5                    & 3                     & 4,2                      & 0,632                           \\
 8         & 8           & Not enough resources & 3                     & 3                        & 0,000
 \end{tabular}
-\caption{Path cost for the \textit{null} heuristic algorithm}
 \label{tab:h0-pathcost}
 \end{table}
 % Number of attacking pairs
@@ -199,6 +199,7 @@ N         & Incremental & CompetelFirstRow     & ComplEveryCol Best    & ComplEv
 For the \textit{number of attacking pairs} heuristic the results obtained are listed below in the form of two tables. \textbf{Table 3} shows the expanded nodes for every version as well as the best, average and standard deviation for the completed version with queens in every column. \textbf{Table 4} shows the same information but for the path cost of the solution.
 
 \begin{table}[]
+\caption{Expanded nodes for the \textit{number of attacking pairs} heuristic function}
 \centering
 \begin{tabular}{llllll}
 Expanded &                      &                  &                       &                          &                                 \\ \hline
@@ -208,11 +209,11 @@ N        & Incremental          & CompleteFirstRow & ComplEveryCol Best    & Com
 8        & 1965                 & 14               & 11                    & 37,2                     & 24,521                          \\
 16       & Not enough resources & 77               & 9                     & 194                      & 172,059                        
 \end{tabular}
-\caption{Expanded nodes for the \textit{number of attacking pairs} heuristic algorithm}
 \label{tab:nattackingpairs-expanded}
 \end{table}
 
 \begin{table}[]
+\caption{Path cost for the \textit{number of attacking pairs} heuristic function}
 \centering
 \begin{tabular}{llllll}
 Path cost &                      &                  &                       &                          &                                 \\ \hline
@@ -222,13 +223,39 @@ N         & Incremental          & CompleteFirstRow & ComplEveryCol Best    & Co
 8         & 8                    & 8                & 4                     & 4,9                      & 0,876                           \\
 16        & Not enough resources & 17               & 7                     & 9                        & 1,333
 \end{tabular}
-\caption{Path cost for the \textit{number of attacking pairs} heuristic algorithm}
 \label{tab:nattackingpairs-pathcost}
 \end{table}
 % Probabilistic estimation of solution
 \subsubsection{Probabilistic estimation of solution}
-For the \textit{probabilist estimation of solution} heuristic the results obtained are listed below in the form of two tables. \textbf{Table 5} shows the expanded nodes for every version as well as the best, average and standard deviation for the completed version with queens in every column. \textbf{Table 6} shows the same information but for the path cost of the solution.
+For the \textit{probabilist estimation of solution} heuristic the results obtained are listed below in the form of two tables. \textbf{Table 5} shows the expanded nodes for every version as well as the best, average and standard deviation for the completed version with queens in every column. Note that for $n = 8$ the average and best case of the complete version with queens in every column are the same. This is because only one of ten executions was able to finish.  \textbf{Table 6} shows the same information but for the path cost of the solution.
 
+\begin{table}[]
+\caption{Expanded nodes for the \textit{probabilistic estimation of solution} heuristic function}
+\centering
+\begin{tabular}{llllll}
+Expanded &                      &                      &                      &                       &                              \\ \hline
+N        & Incremental          & CompleteFirstRow     & ComplEveryCol Best   & ComplEveryCol Average & ComplEveryCol Std. Deviation \\ \hline
+4        & 15                   & 70                   & 26                   & 84,2                  & 49,161                       \\
+6        & 149                  & 15259                & 576                  & 8464,5                & 7253,468                     \\
+8        & 1965                 & Not enough resources & 20081                & 20081                 & 0,000                        \\
+16       & Not enough resources & Not enough resources & Not enough resources & Not enough resources  & Not enough resources        
+\end{tabular}
+\label{tab:probestimation-expanded}
+\end{table}
+
+\begin{table}[]
+\caption{Path cost for the \textit{probabilistic estimation of solution} heuristic function}
+\centering
+\label{tab:probestimation-pathcost}
+\begin{tabular}{llllll}
+Path cost &                      &                      &                      &                       &                              \\ \hline
+N         & Incremental          & CompleteFirstRow     & ComplEveryCol Best   & ComplEveryCol Average & ComplEveryCol Std. Deviation \\ \hline
+4         & 4                    & 3                    & 2                    & 2,5                   & 0,527                        \\
+6         & 6                    & 5                    & 3                    & 3,9                   & 0,738                        \\
+8         & 8                    & Not enough resources & 3                    & 3                     & 0,000                        \\
+16        & Not enough resources & Not enough resources & Not enough resources & Not enough resources  & Not enough resources        
+\end{tabular}
+\end{table}
 % Genetic algorithm results
 \subsection{GA Results}\label{gen_results}
 Now the data obtained from the executions of the genetic algorithm will be shown in the form of three tables. \textbf{Table 7} shows the parameter values for the genetic algorithm. \textbf{Table 8} shows the average and best fitness values, the standard deviation and the number of solutions for each ten executions of the problem.
