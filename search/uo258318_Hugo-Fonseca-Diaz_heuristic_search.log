@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  1 NOV 2020 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  1 NOV 2020 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -841,36 +841,46 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-6.
+7.
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-6.
+7.
 
 (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-26.
+27.
 
 (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-26.
+27.
 
 (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 26.
+(Font)              <10.95> on input line 27.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 26.
+(Font)              <8> on input line 27.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 26.
+(Font)              <6> on input line 27.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+7.
+
+(/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-0.
+1.
 
 (/usr/share/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -880,20 +890,20 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ! Undefined control sequence.
 <write> \@chapapp 
                   \space \thechapter .
-l.128 \begin{thebibliography}{8}
+l.129 \begin{thebibliography}{8}
                                 
 ? 
  2.
 ! Undefined control sequence.
 \Hy@org@chapter ...}{chapter}{#1}\fi \chaptermark 
                                                   {#1}\addtocontents {lof}{\...
-l.128 \begin{thebibliography}{8}
+l.129 \begin{thebibliography}{8}
                                 
 ? 
 ! Undefined control sequence.
 \@makechapterhead ...r \large \bfseries \@chapapp 
                                                   {} \thechapter \par \nobre...
-l.128 \begin{thebibliography}{8}
+l.129 \begin{thebibliography}{8}
                                 
 ? 
 
@@ -903,7 +913,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.135 ...delberg (2016). \doi{10.10007/1234567890}
+l.136 ...delberg (2016). \doi{10.10007/1234567890}
                                                   
 ? 
 
@@ -913,32 +923,26 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.146 ...epage, \url{http://www.springer.com/lncs}
+l.147 ...epage, \url{http://www.springer.com/lncs}
                                                   . Last accessed 4
 ? 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-46.
-(/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
 
 AED: lastpage setting LastPage
 [5
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
  (./uo258318_Hugo-Fonseca-Diaz_heuristic_search.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
 Package rerunfilecheck Info: File `uo258318_Hugo-Fonseca-Diaz_heuristic_search.
 out' has not changed.
 (rerunfilecheck)             Checksum: 95B513B0C8820B04C34B8259B19F1898;166.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  17950 strings out of 480478
@@ -948,8 +952,8 @@ Here is how much of TeX's memory you used:
  575513 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,6n,68p,1079b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
-nts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fo
+nts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.
 enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-d
 ist/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/lm/
 lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/
@@ -960,8 +964,8 @@ type1/public/lm/lmr9.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pf
 b></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
 lmtt10.pfb>
-Output written on uo258318_Hugo-Fonseca-Diaz_heuristic_search.pdf (5 pages, 226
-478 bytes).
+Output written on uo258318_Hugo-Fonseca-Diaz_heuristic_search.pdf (5 pages, 229
+195 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  97 compressed objects within 1 object stream
