@@ -114,11 +114,112 @@ The genetic algorithm implemented for solving the N-queens problem has the follo
 \end{itemize}
 % Experimental Research
 \section{Experimental Research}\label{exp_research}
-Experimental Research.
+The behaviours of the A* and genetic algorithm previously defined are going to be measured next. For this, a modified version of the \textit{aima-java} project available at \cite{aimajava} is used. As the name implies, these algorithms are implemented in the \textit{Java} programming language.
+
+For the enviroment used to test the algorithms the following information is listed:
+\begin{itemize}
+    \item \textbf{Operating system:} Manjaro Linux \textit{x86-64}
+    \item \textbf{Kernel:} 5.7.19-2-MANJARO
+    \item \textbf{Host:} 81DE Lenovo ideapad 330-15IKB
+    \item \textbf{CPU:} Intel i7-8550U (8) @ 4.000GHz
+    \item \textbf{RAM:} 8GB
+\end{itemize}
+
+This experimental research consists of a description of the dataset, a list of the results obtained for both algorithms and a comparison between their behaviours for solving the N-queens problem.
+% Dataset
 \subsection{Dataset}\label{dataset}
-Dataset
+The problems to be resolved are the following:
+\begin{itemize}
+    \item \textbf{A*:}
+    \begin{itemize}
+        \item \textbf{Complete version:}
+        \begin{itemize}
+            \item \textbf{In the first row:} executed one time for each heuristic function and $n$ in range 4, 6, 8, 16 and 32. The following heuristic functions will be tested:
+            \begin{itemize}
+                \item \textit{Null heuristic}
+                \item \textit{Number of attacking pairs}
+                \item \textit{Probabilistic estimation of solution}
+            \end{itemize}
+            \item \textbf{In every column:} executed ten times for each heuristic function and $n$ in range 4, 6, 8, 16 and 32. The average and best execution will be listed. The following heuristic functions will be tested:
+            \begin{itemize}
+                \item \textit{Null heuristic}
+                \item \textit{Number of attacking pairs}
+                \item \textit{Probabilistic estimation of solution}
+            \end{itemize}
+        \end{itemize}
+        \item \textbf{Incremental version:} executed one time for each heuristic function and $n$ in range 4, 6, 8, 16 and 32. The following heuristic functions will be tested:
+        \begin{itemize}
+            \item \textit{Null heuristic}
+            \item \textit{Number of attacking pairs}
+            \item \textit{Probabilistic estimation of solution}
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Genetic algorithm:} executed ten times for each $n$ in range 4, 6, 8, 16 and 32. The average and best execution will be listed.
+\end{itemize}
+% Results
 \subsection{A* Results}\label{astar_results}
-A* Results.
+The results obtained in the executions of A* are the following:
+% Null heuristic
+\subsubsection{Null heuristic}
+For the \textit{null} heuristic the measurements obtained are listed below in the form of two tables. \textbf{Table 1} shows the expanded nodes for every version as well as the best, average and standard deviation for the completed version with queens in every column. \textbf{Table 2} shows the same information but for the path cost of the solution.
+
+\begin{table}[]
+\begin{tabular}{llllll}
+Expanded &             &                      &                       &                          &                                 \\
+N        & Incremental & CompleteFirstRow     & CompleteEveryCol Best & CompleteEveryCol Average & CompleteEveryCol Std. Deviation \\
+4        & 15          & 70                   & 6                     & 68                       & 58,256                          \\
+6        & 149         & 15259                & 1667                  & 8873,2                   & 5215,761                        \\
+8        & 1965        & Not enough resources & 1738                  & 7276                     & 7831,915                       
+\end{tabular}
+\caption{Expanded nodes for the \textit{null} heuristic algorithm}
+\label{tab:h0-expanded}
+\end{table}
+
+\begin{table}[]
+\begin{tabular}{llllll}
+Path cost &             &                      &                       &                          &                                 \\
+N         & Incremental & CompleteFirstRow     & CompleteEveryCol Best & CompleteEveryCol Average & CompleteEveryCol Std. Deviation \\
+4         & 4           & 3                    & 1                     & 2,2                      & 0,919                           \\
+6         & 6           & 5                    & 3                     & 4,2                      & 0,632                           \\
+8         & 8           & Not enough resources & 3                     & 3                        & 0,000
+\end{tabular}
+\caption{Path cost for the \textit{null} heuristic algorithm}
+\label{tab:h0-pathcost}
+\end{table}
+% Number of attacking pairs
+\subsubsection{Number of attacking pairs}
+For the \textit{number of attacking pairs} heuristic the results obtained are listed below in the form of two tables. \textbf{Table 3} shows the expanded nodes for every version as well as the best, average and standard deviation for the completed version with queens in every column. \textbf{Table 4} shows the same information but for the path cost of the solution.
+
+\begin{table}[]
+\begin{tabular}{llllll}
+Expanded &                      &                  &                       &                          &                                 \\
+N        & Incremental          & CompleteFirstRow & CompleteEveryCol Best & CompleteEveryCol Average & CompleteEveryCol Std. Deviation \\
+4        & 15                   & 4                & 2                     & 6,7                      & 4,855                           \\
+6        & 149                  & 76               & 3                     & 30,1                     & 17,527                          \\
+8        & 1965                 & 14               & 11                    & 37,2                     & 24,521                          \\
+16       & Not enough resources & 77               & 9                     & 194                      & 172,059                        
+\end{tabular}
+\caption{Expanded nodes for the \textit{number of attacking pairs} heuristic algorithm}
+\label{tab:nattackingpairs-expanded}
+\end{table}
+
+\begin{table}[]
+\begin{tabular}{llllll}
+Path cost &                      &                  &                       &                          &                                 \\
+N         & Incremental          & CompleteFirstRow & CompleteEveryCol Best & CompleteEveryCol Average & CompleteEveryCol Std. Deviation \\
+4         & 4                    & 3                & 2                     & 2,8                      & 0,632                           \\
+6         & 6                    & 6                & 3                     & 4,1                      & 0,738                           \\
+8         & 8                    & 8                & 4                     & 4,9                      & 0,876                           \\
+16        & Not enough resources & 17               & 7                     & 9                        & 1,333
+\end{tabular}
+\caption{Path cost for the \textit{number of attacking pairs} heuristic algorithm}
+\label{tab:nattackingpairs-pathcost}
+\end{table}
+% Probabilistic estimation of solution
+\subsubsection{Probabilistic estimation of solution}
+For the \textit{probabilist estimation of solution} heuristic the results obtained are listed below in the form of two tables. \textbf{Table 5} shows the expanded nodes for every version as well as the best, average and standard deviation for the completed version with queens in every column. \textbf{Table 6} shows the same information but for the path cost of the solution.
+
+% Genetic algorithm results
 \subsection{GA Results}\label{gen_results}
 Genetic Algorithm Results.
 \subsection{Comparison of A* and GA results}\label{comparison_astar_gen}
@@ -127,6 +228,9 @@ Comparison of A* and GA results.
 Conclusions.
 % Bibliography
 \begin{thebibliography}{8}
+\bibitem{aimajava}
+Github's repository page for the \textit{aima-java} project, \url{https://github.com/aimacode/aima-java}. Last accesed 1 November 2020.
+
 \bibitem{ref_article1}
 Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
 
