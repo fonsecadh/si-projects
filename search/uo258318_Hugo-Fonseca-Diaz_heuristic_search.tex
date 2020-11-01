@@ -82,8 +82,24 @@ A genetic algorithm has the following components:
     \end{itemize}
     \item Some \textbf{parameters}. Like the population size, number of generations, crossover probability, mutation probability, etc.
 \end{itemize}
+% Application of A* algorithm to the N-queens problem
 \section{Application of A* algorithm to the N-queens problem}\label{astar_nqueens}
-Application of A* algorithm to the N-queens Problem.
+Two ways of modeling the search space have been defined for this problem:
+\begin{itemize}
+    \item \textbf{Incremental:} in this version, the initial state is the empty gameboard and in each iteration a new queen is placed in a position such as it is not attacking or being attacked by any other queen in the board. This keeps going until the N queens are placed or until there are no locations in the board where the queen can be placed without breaking the constraints.
+    \item \textbf{Complete:} in this version, the initial state is a board where the N queens are already placed. However, the queens can be in locations where they are attacking one another. In each iteration a queen is moved to a different position until a state where no pair of queens are attacking themselves is reached. There are two variants:
+    \begin{itemize}
+        \item \textbf{Queens in first row:} in this variant the n queens are placed in the first row of the board.
+        \item \textbf{Queens in every column:} in this variant the n queens are placed in random positions of the board, so different executions can lead to different results.
+    \end{itemize}
+\end{itemize}
+Three heuristic functions were implemented for solving the problem:
+\begin{itemize}
+    \item \textbf{Null heuristic:} heuristic function that always return zero. It is an admissible heuristic.  
+    \item \textbf{Number of attacking pairs:} heuristic function that estimates de number of necessary movements in order to achieve a solution by means of analysing the number of attacking pairs in a board where there are already N queens placed. It is an admissible and a monotonous heuristic.
+    \item \textbf{Probabilistic estimation of solution:} heuristic function that estimates the probability of finding a solution from any given state. It is an admissible heuristic. 
+\end{itemize}
+% Application of genetic algorithms to the N-queens problem
 \section{Applications of genetic algorithms to the N-queens problem}\label{gen_nqueens}
 Application of Genetic Algorithms to the N-queens Problem.
 \section{Experimental Research}\label{exp_research}
