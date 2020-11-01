@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  1 NOV 2020 22:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  1 NOV 2020 22:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -789,11 +789,11 @@ out' has not changed.
 (rerunfilecheck)             Checksum: 1FC8F5A5EA460963949CFF489EFAFB43;121.
  ) 
 Here is how much of TeX's memory you used:
- 10620 strings out of 480478
- 162946 string characters out of 5905960
+ 10622 strings out of 480478
+ 162966 string characters out of 5905960
  516119 words of memory out of 5000000
  26320 multiletter control sequences out of 15000+600000
- 588754 words of font info for 91 fonts, out of 8000000 for 9000
+ 588837 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,8n,45p,914b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
@@ -810,7 +810,7 @@ b></usr/share/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf-dist
 lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/lm/lmtt9.pfb>
 Output written on uo258318_Hugo-Fonseca-Diaz_heuristic_search.pdf (8 pages, 288
-388 bytes).
+663 bytes).
 PDF statistics:
  168 PDF objects out of 1000 (max. 8388607)
  137 compressed objects within 2 object streams
