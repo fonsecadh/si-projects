@@ -30,7 +30,7 @@ This paper conducts a theoretical and experimental research in order to solve th
 \end{abstract}
 % Introduction
 \section{Introduction}\label{introduction}
-This paper will consist on solving the popular problem known as \textit{N-queens} by means of two different algorithms. These algorithms are the A* and a genetic algorithm.
+This paper will consist on solving the popular problem known as \textit{N-queens} by means of two different algorithms. These algorithms are the A* and a genetic algorithm. The motivation for solving the N-Queens is to see how these algorithms behave against a problem with so many combinations that requires a big computational calculation.
 
 In the first part of the document a theoretical definition of the problem and of the algorithms will be carried out. After that, there is a description of the steps taken into adapting these algorithms for being able to solve the problem. Finally, an experimental study will take place in order to measure the overall performance and effectiveness of the two approaches, and also a comparison between the results.
 % N queens problem
@@ -39,10 +39,10 @@ Introduced in 1848 by chess composer Max Bezzel as the \textit{eight queens puzz
 
 Some traditional forms of solving the problem include:
 \begin{itemize}
-    \item Recursive algorithms.
-    \item A \textit{brute-force} search algorithm.
-    \item A \textit{backtracking} search algorithm with depth-first search.
-    \item \textit{Greedy} algorithms.
+    \item \textit{Recursive algorithms}: in each iteration they place a single queen in the board and change the problem from an $n$ queens problem to a $n - 1$ queens problem.
+    \item A \textit{brute-force} search algorithm: it considers all combinations of placing the queens in the board and then filters out the ones that put more than one queen in the same location or that put a pair of queens atacking themselves.
+    \item A \textit{backtracking} search algorithm with depth-first search: creates the search tree by taking into account one row of the board at a time, which eliminates most non-solutions very early in the execution.
+    \item \textit{Greedy} algorithms: even though they do not always find the optimal solution they can solve problems with greater size than the ones backtracking is able to solve.
 \end{itemize}
 % A* algorithm
 \section{A* algorithm}\label{astar_alg}

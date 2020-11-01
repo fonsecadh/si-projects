@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  1 NOV 2020 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.8)  1 NOV 2020 23:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -701,7 +701,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `htbp') on input line 172.
@@ -719,7 +719,6 @@ Overfull \hbox (1.24794pt too wide) in paragraph at lines 175--183
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `htbp') on input line 185.
 
-[5]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `htbp') on input line 201.
@@ -760,11 +759,12 @@ Overfull \hbox (39.78271pt too wide) in paragraph at lines 250--258
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `htbp') on input line 263.
 
+[6]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `htbp') on input line 274.
 
-[6] [7]
+[7]
 
 ! LaTeX Error: Undefined color `Blue'.
 
@@ -789,11 +789,11 @@ out' has not changed.
 (rerunfilecheck)             Checksum: 1FC8F5A5EA460963949CFF489EFAFB43;121.
  ) 
 Here is how much of TeX's memory you used:
- 10622 strings out of 480478
- 162966 string characters out of 5905960
- 516119 words of memory out of 5000000
+ 10624 strings out of 480478
+ 162988 string characters out of 5905960
+ 514119 words of memory out of 5000000
  26320 multiletter control sequences out of 15000+600000
- 588837 words of font info for 92 fonts, out of 8000000 for 9000
+ 588967 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,8n,45p,914b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fo
@@ -809,8 +809,8 @@ b></usr/share/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf-dist
 /fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/
 lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on uo258318_Hugo-Fonseca-Diaz_heuristic_search.pdf (8 pages, 288
-663 bytes).
+Output written on uo258318_Hugo-Fonseca-Diaz_heuristic_search.pdf (8 pages, 290
+261 bytes).
 PDF statistics:
  168 PDF objects out of 1000 (max. 8388607)
  137 compressed objects within 2 object streams
