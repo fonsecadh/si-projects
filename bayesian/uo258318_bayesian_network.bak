@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProbModelXML formatVersion="0.2.0">
+  <ProbNet type="BayesianNetwork">
+    <Comment showWhenOpeningNetwork="false"><![CDATA[<<Pulse dos veces para incluir/modificar comentario>>]]></Comment>
+    <DecisionCriteria>
+      <Criterion name="---" unit="---" />
+    </DecisionCriteria>
+    <Properties />
+    <Variables>
+      <Variable name="Tipo de Seguro" type="finiteStates" role="chance">
+        <Coordinates x="331" y="249" />
+        <States>
+          <State name="A todo riesgo con franquicia" />
+          <State name="A todo riesgo sin franquicia" />
+          <State name="A terceros con lunas" />
+          <State name="A terceros sin lunas" />
+          <State name="Consorcio" />
+        </States>
+      </Variable>
+      <Variable name="Marca y modelo" type="finiteStates" role="chance">
+        <Coordinates x="120" y="142" />
+        <States>
+          <State name="&lt;=30.00€" />
+          <State name="&gt;30.000€" />
+        </States>
+      </Variable>
+      <Variable name="Titular del seguro" type="finiteStates" role="chance">
+        <Coordinates x="858" y="130" />
+        <States>
+          <State name="No" />
+          <State name="Sí" />
+        </States>
+      </Variable>
+      <Variable name="Culpa del accidente" type="finiteStates" role="chance">
+        <Coordinates x="611" y="123" />
+        <States>
+          <State name="De la otra parte" />
+          <State name="De tu parte" />
+        </States>
+      </Variable>
+      <Variable name="La otra parte tiene seguro" type="finiteStates" role="chance">
+        <Coordinates x="1121" y="190" />
+        <States>
+          <State name="No" />
+          <State name="Sí" />
+        </States>
+      </Variable>
+      <Variable name="Importe de la avería" type="finiteStates" role="chance">
+        <Coordinates x="907" y="539" />
+        <States>
+          <State name="&lt;valor actual vehículo" />
+          <State name="&gt;valor actual vehículo" />
+        </States>
+      </Variable>
+      <Variable name="Antigüedad" type="finiteStates" role="chance">
+        <Coordinates x="318" y="65" />
+        <States>
+          <State name="&lt;=4 años" />
+          <State name="&gt;4 años" />
+        </States>
+      </Variable>
+      <Variable name="Imprudencia" type="finiteStates" role="chance">
+        <Coordinates x="475" y="545" />
+        <States>
+          <State name="No" />
+          <State name="Sí" />
+        </States>
+      </Variable>
+      <Variable name="El seguro paga el valor del vehículo" type="finiteStates" role="chance">
+        <Coordinates x="494" y="374" />
+        <States>
+          <State name="No" />
+          <State name="Sí" />
+        </States>
+      </Variable>
+      <Variable name="El seguro arregla el vehículo" type="finiteStates" role="chance">
+        <Coordinates x="843" y="372" />
+        <States>
+          <State name="No" />
+          <State name="Sí" />
+        </States>
+      </Variable>
+    </Variables>
+    <Links>
+      <Link directed="true">
+        <Variable name="Tipo de Seguro" />
+        <Variable name="El seguro paga el valor del vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Tipo de Seguro" />
+        <Variable name="El seguro arregla el vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Marca y modelo" />
+        <Variable name="Tipo de Seguro" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Titular del seguro" />
+        <Variable name="El seguro paga el valor del vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Titular del seguro" />
+        <Variable name="El seguro arregla el vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Culpa del accidente" />
+        <Variable name="El seguro paga el valor del vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Culpa del accidente" />
+        <Variable name="El seguro arregla el vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="La otra parte tiene seguro" />
+        <Variable name="El seguro arregla el vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="La otra parte tiene seguro" />
+        <Variable name="El seguro paga el valor del vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Importe de la avería" />
+        <Variable name="El seguro paga el valor del vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Antigüedad" />
+        <Variable name="Tipo de Seguro" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Imprudencia" />
+        <Variable name="El seguro paga el valor del vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Imprudencia" />
+        <Variable name="El seguro arregla el vehículo" />
+      </Link>
+      <Link directed="true">
+        <Variable name="El seguro paga el valor del vehículo" />
+        <Variable name="El seguro arregla el vehículo" />
+      </Link>
+    </Links>
+    <Potentials>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="Tipo de Seguro" />
+          <Variable name="Marca y modelo" />
+          <Variable name="Antigüedad" />
+        </Variables>
+        <Values>0.15 0.05 0.4 0.35 0.05 0.45 0.25 0.2 0.05 0.05 0.1 0.05 0.5 0.3 0.05 0.35 0.1 0.35 0.15 0.05</Values>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="Marca y modelo" />
+        </Variables>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="Titular del seguro" />
+        </Variables>
+        <Values>0.1 0.9</Values>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="Culpa del accidente" />
+        </Variables>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="La otra parte tiene seguro" />
+        </Variables>
+        <Values>0.05 0.95</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="Importe de la avería" />
+        </Variables>
+        <Values>0.6 0.4</Values>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="Antigüedad" />
+        </Variables>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="Imprudencia" />
+        </Variables>
+        <Values>0.95 0.05</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="El seguro paga el valor del vehículo" />
+          <Variable name="Titular del seguro" />
+          <Variable name="Culpa del accidente" />
+          <Variable name="Imprudencia" />
+          <Variable name="La otra parte tiene seguro" />
+          <Variable name="Importe de la avería" />
+          <Variable name="Tipo de Seguro" />
+        </Variables>
+        <Values>1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="El seguro arregla el vehículo" />
+          <Variable name="Titular del seguro" />
+          <Variable name="Culpa del accidente" />
+          <Variable name="Imprudencia" />
+          <Variable name="La otra parte tiene seguro" />
+          <Variable name="Tipo de Seguro" />
+          <Variable name="El seguro paga el valor del vehículo" />
+        </Variables>
+        <Values>1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0</Values>
+      </Potential>
+    </Potentials>
+  </ProbNet>
+  <InferenceOptions>
+    <MulticriteriaOptions>
+      <SelectedAnalysisType>UNICRITERION</SelectedAnalysisType>
+      <Unicriterion>
+        <Scales>
+          <Scale Criterion="---" Value="1.0" />
+        </Scales>
+      </Unicriterion>
+      <CostEffectiveness>
+        <Scales>
+          <Scale Criterion="---" Value="1.0" />
+        </Scales>
+        <CE_Criteria>
+          <CE_Criterion Criterion="---" Value="Cost" />
+        </CE_Criteria>
+      </CostEffectiveness>
+    </MulticriteriaOptions>
+  </InferenceOptions>
+</ProbModelXML>
