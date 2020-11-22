@@ -1,0 +1,40 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage[colorlinks=true,urlcolor=Blue,linkcolor=black,citecolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage{lastpage}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage[affil-it]{authblk}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage[hmargin=2cm,top=4cm,headheight=65pt,footskip=65pt]{geometry}
+
+% Documento
+\begin{document}
+% Título
+\title{SI. Redes bayesianas. Práctica obligatoria.}
+\author{Hugo Fonseca Díaz\\ \email{uo258318@uniovi.es}}
+\affil{Escuela de Ingeniería Informática. Universidad de Oviedo.}
+\maketitle
+% Descripción de la red bayesiana
+\section{Descripción de la red bayesiana}
+En este documento se expone el modelo utilizado a la hora de diseñar la red bayesiana para el ejercicio de las prácticas obligatorias de este temario.
+% Situación modelada
+\subsection{Situación modelada}
+La red en cuestión modela las probabilidades de que un seguro de coche pague el valor del vehículo o lo arregle en caso de que se produzca un siniestro.
+
+Para ello, se han creado diez nodos que representan posibles factores a tener en cuenta en dicha situación. Esos nodos son la marca y modelo del vehículo, la antigüedad del mismo, el tipo de seguro, si el conductor es titular o no del seguro, de quién es la culpa del accidente, si se produjo alguna imprudencia (conducción bajo los efectos del alcohol, conducir sin carnet o sin puntos, exceso de velocidad exagerado, etc), si la otra parte está asegurada, si el importe de la avería es superior al valor actual del vehículo, y por último si el seguro se hace cargo del pagado del valor del vehículo o de las reparaciones del mismo, en caso de que fuera conveniente.
+\subsection{Estadisticas y comportamiento de la red}
+En el caso de las estadísticas, se han realizado gracias a la experiencia personal de familiares y amigos que trabajan en concesionarios y que conducen en su día a día. También de ellos se han obtenido las situaciones específicas en las que un seguro de coche se hace cargo de los gastos o de la reparación de un siniestro, lo que ha sido de especial utilidad a la hora de diseñar los nodos de la red.
+\end{document}
